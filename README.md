@@ -1,6 +1,7 @@
 # ignite_03_API_NodeJS_SOLID
 
 ## Anotações
+A definição de save-exact=true no arquivo .npmrc serve para deixar as versões de todas as dependências fixas, assim se em algum momento for necessário baixar novamente ele buscará pela versão em que o projeto foi construido.
 
 ## App
 GymPass style app.
