@@ -3,7 +3,7 @@
 ## Anotações
 
 ## App
-GymPAss style app.
+GymPass style app.
 
 ### RFs (Requisitos funcionais - O que?)
 - [ ] Deve ser possível se cadastrar;
