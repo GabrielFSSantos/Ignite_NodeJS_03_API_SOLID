@@ -3,6 +3,20 @@
 ## Anotações
 A definição de save-exact=true no arquivo .npmrc serve para deixar as versões de todas as dependências fixas, assim se em algum momento for necessário baixar novamente ele buscará pela versão em que o projeto foi construido.
 
+Criar ambiente Docker com postgres: docker compose up -d (irá rodar o arquivo docker-compose.yml subindo a imagem)
+O mesmo comando de criação, mas diretamente no terminal:
+docker run 
+--name api-nodejs-solid-pg 
+-e POSTGRESQL_USERNAME=docker 
+-e POSTGRESQL_PASSWORD=docker 
+-e POSTGRESQL_DATABASE=apisolid 
+-p 5432:5432 bitnami/postgresql
+
+ORM - Object Relational Mapper (Prisma, Sequilize, TypeORM)
+Para subir as alterações nas tabelas criadas do Prisma para o banco basta executar: npx prisma migrate dev
+Para subir todas as migrations de uma vez no momento de produção basta executar: npx prisma migrate deploy
+E caso quiser ter uma visualização dos dados das tabelas basta executar: npx prisma studio
+
 ## App
 GymPass style app.
 
