@@ -17,6 +17,9 @@ Para subir as alterações nas tabelas criadas do Prisma para o banco basta exec
 Para subir todas as migrations de uma vez no momento de produção basta executar: npx prisma migrate deploy
 E caso quiser ter uma visualização dos dados das tabelas basta executar: npx prisma studio
 
+SOLID:
+D - Dependency Inversion Principle (Casos de uso não instancia dependências, ele as recebe como parâmetro)
+
 ## App
 GymPass style app.
 
