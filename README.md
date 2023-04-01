@@ -17,6 +17,9 @@ Para subir as alterações nas tabelas criadas do Prisma para o banco basta exec
 Para subir todas as migrations de uma vez no momento de produção basta executar: npx prisma migrate deploy
 E caso quiser ter uma visualização dos dados das tabelas basta executar: npx prisma studio
 
+Tratativa de erros: 
+Para erros internos do sistema que forem gerados em produção, é essêncial é que seus logs sejam enviados para uma ferramenta externa como DataDog/NewRelic/Sentry
+
 SOLID:
 D - Dependency Inversion Principle (Casos de uso não instancia dependências, ele as recebe como parâmetro)
 
