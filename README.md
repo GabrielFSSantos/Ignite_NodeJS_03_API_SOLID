@@ -21,11 +21,14 @@ Tratativa de erros:
 Para erros internos do sistema que forem gerados em produção, é essêncial é que seus logs sejam enviados para uma ferramenta externa como DataDog/NewRelic/Sentry
 
 Testes:
-In Memory Test Database Design Pattern - Representação do banco de dados em memória para realização de testes, dessa forma evitando precisar de um banco para testes, tornando os testes mais rápidos, foco em testar funcionalidades das funções, como caso de usos.
 npm run test - Roda os testes sem ficar observando a cada mudança (watch).
 npm run test:watch - Roda os testes e fica observando a cada mudança (watch).
 npm run test:coverage - Roda os testes e cria /coverage/index.html para visualização do cobrimento dos testes.
 npm run test:ui - Interface para visualiação e execução de testes.
+
+Design Pattern:
+In Memory Test Database - Representação do banco de dados em memória para realização de testes, dessa forma evitando precisar de um banco para testes, tornando os testes mais rápidos, foco em testar funcionalidades das funções, como caso de usos.
+Factory - Adiciona uma abstração extra para a instanciação de dependências de um método ou classe, ou seja, no código isso reflete nas dependências dos casos de uso que são instanciadas e passadas nos controllers, mas para evitar isso criamos as factories abstraindo as chamadas de dependerias e no conrtroller chamamos apenas a factory.
 
 SOLID:
 D - Dependency Inversion Principle (Casos de uso não instancia dependências, ele as recebe como parâmetro)
@@ -34,8 +37,8 @@ D - Dependency Inversion Principle (Casos de uso não instancia dependências, e
 GymPass style app.
 
 ### RFs (Requisitos funcionais - O que?)
-- [ ] Deve ser possível se cadastrar;
-- [ ] Deve ser possível se autenticar;
+- [x] Deve ser possível se cadastrar;
+- [x] Deve ser possível se autenticar;
 - [ ] Deve ser possível obter o perfil de um usuário logado;
 - [ ] Deve ser possível obter o número de check-ins realizados pelo usuário;
 - [ ] Deve ser possível o usuário obter seu histórico de check-ins;
@@ -46,7 +49,7 @@ GymPass style app.
 - [ ] Deve ser possível cadastrar uma academia;
 
 ### RNs (Regras de negócio - Quando?)
-- [ ] O usuário não deve poder se cadastrar com um e-mail duplicado;
+- [x] O usuário não deve poder se cadastrar com um e-mail duplicado;
 - [ ] O usuário não pode fazer check-ins no mesmo dia;
 - [ ] O usuário não pode fazer check-in se não estiver perto (100m) da academia;
 - [ ] O check-in só pode ser validado até 20 minutos após criado;
@@ -54,7 +57,7 @@ GymPass style app.
 - [ ] A academia só pode ser cadastrada por administradores;
 
 ### RNFs (Requisitos não-funcionais - Técnicos)
-- [ ] A senha do usuário precisa estar criptografada;
-- [ ] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
+- [x] A senha do usuário precisa estar criptografada;
+- [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
 - [ ] Todas listas de dados rpecisam estar páginadas com 20 itens por página;
 - [ ] O usuário deve ser identificado por um JWT (JSON web Token);
