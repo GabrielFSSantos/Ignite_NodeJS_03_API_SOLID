@@ -20,6 +20,13 @@ E caso quiser ter uma visualização dos dados das tabelas basta executar: npx p
 Tratativa de erros: 
 Para erros internos do sistema que forem gerados em produção, é essêncial é que seus logs sejam enviados para uma ferramenta externa como DataDog/NewRelic/Sentry
 
+Testes:
+In Memory Test Database Design Pattern - Representação do banco de dados em memória para realização de testes, dessa forma evitando precisar de um banco para testes, tornando os testes mais rápidos, foco em testar funcionalidades das funções, como caso de usos.
+npm run test - Roda os testes sem ficar observando a cada mudança (watch).
+npm run test:watch - Roda os testes e fica observando a cada mudança (watch).
+npm run test:coverage - Roda os testes e cria /coverage/index.html para visualização do cobrimento dos testes.
+npm run test:ui - Interface para visualiação e execução de testes.
+
 SOLID:
 D - Dependency Inversion Principle (Casos de uso não instancia dependências, ele as recebe como parâmetro)
 
