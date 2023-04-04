@@ -21,6 +21,11 @@ Tratativa de erros:
 Para erros internos do sistema que forem gerados em produção, é essêncial é que seus logs sejam enviados para uma ferramenta externa como DataDog/NewRelic/Sentry
 
 Testes:
+TDD - Test-driven development (desenvolvimento dirigido a teste), metodologia que facilita entender e caminhar pelas regras de negócio das funcionalidades enquanto elas são desenvolvidas, muito boa para features mais complexas. (Exemplo realizado na criação de check-ins)
+red - Estado quando se cria o teste primeuro mas a funcionalidade ainda não está implementada.
+green - Estado quando a funcionaldiade está criada e quando é realizado o teste ele não gera erro.
+refactor - Estado quando você refatroa o código para ?? 
+
 npm run test - Roda os testes sem ficar observando a cada mudança (watch).
 npm run test:watch - Roda os testes e fica observando a cada mudança (watch).
 npm run test:coverage - Roda os testes e cria /coverage/index.html para visualização do cobrimento dos testes.
@@ -39,19 +44,19 @@ GymPass style app.
 ### RFs (Requisitos funcionais - O que?)
 - [x] Deve ser possível se cadastrar;
 - [x] Deve ser possível se autenticar;
-- [ ] Deve ser possível obter o perfil de um usuário logado;
+- [x] Deve ser possível obter o perfil de um usuário logado;
 - [ ] Deve ser possível obter o número de check-ins realizados pelo usuário;
 - [ ] Deve ser possível o usuário obter seu histórico de check-ins;
 - [ ] Deve ser possível o usuário buscar academias próximas;
 - [ ] Deve ser possível o usuário buscar academias pelo nome;
-- [ ] Deve ser possível o usuário realizar check-in em uma academia;
+- [x] Deve ser possível o usuário realizar check-in em uma academia;
 - [ ] Deve ser possível validar o check-in de um usuário;
 - [ ] Deve ser possível cadastrar uma academia;
 
 ### RNs (Regras de negócio - Quando?)
 - [x] O usuário não deve poder se cadastrar com um e-mail duplicado;
-- [ ] O usuário não pode fazer check-ins no mesmo dia;
-- [ ] O usuário não pode fazer check-in se não estiver perto (100m) da academia;
+- [x] O usuário não pode fazer check-ins no mesmo dia;
+- [x] O usuário não pode fazer check-in se não estiver perto (100m) da academia;
 - [ ] O check-in só pode ser validado até 20 minutos após criado;
 - [ ] O check-in só pode ser validado por administradores;
 - [ ] A academia só pode ser cadastrada por administradores;
