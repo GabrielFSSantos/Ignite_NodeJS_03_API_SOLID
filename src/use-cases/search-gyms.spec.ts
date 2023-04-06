@@ -22,7 +22,7 @@ describe('Search Gyms Use Case', () => {
 
     await gymsRepository.create({
       title: 'TypeScript Gym',
-      description: 'JavaScript Gym',
+      description: 'TypeScript Gym',
       phone: '(00)00000-0000',
       latitude: 0,
       longitude: 0,
