@@ -33,17 +33,17 @@ export class InMemoryGymsRepository implements GymsRepository {
 
   async searchManyByQuery(query: string, page: number) {
     return this.items
-      .filter((gym) => gym.title.includes(query))
+      .filter((item) => item.title.includes(query))
       .slice((page - 1) * 20, page * 20)
   }
 
   async findManyNearby(params: FindManyNearbyParams) {
-    return this.items.filter((gym) => {
+    return this.items.filter((item) => {
       const distance = getDistanceBetweenCoordinates(
         { latitude: params.latitude, longitude: params.longitude },
         {
-          latitude: gym.latitude.toNumber(),
-          longitude: gym.longitude.toNumber(),
+          latitude: item.latitude.toNumber(),
+          longitude: item.longitude.toNumber(),
         },
       )
 
