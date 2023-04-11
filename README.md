@@ -17,6 +17,11 @@ Para subir as alterações nas tabelas criadas do Prisma para o banco basta exec
 Para subir todas as migrations de uma vez no momento de produção basta executar: npx prisma migrate deploy
 E caso quiser ter uma visualização dos dados das tabelas basta executar: npx prisma studio
 
+JWT - JSON Web Token
+Usuário faz login, envia email/senha, o back-end cria um token único, não-modificável e Stateless.
+Stateless: Não armazenado em nenhuma estrutura de persiência de dados (banco de dados).
+Quando back-end cria um token ele usa uma palavra-chave (string)
+
 Tratativa de erros: 
 Para erros internos do sistema que forem gerados em produção, é essêncial é que seus logs sejam enviados para uma ferramenta externa como DataDog/NewRelic/Sentry
 
