@@ -8,6 +8,6 @@ export async function gymsRoutes(app: FastifyInstance) {
   app.addHook('onRequest', verifyJWT)
 
   app.post('/gyms', create)
-  app.post('/gyms/nearby', nearby)
-  app.post('/gyms/search', search)
+  app.get('/gyms/nearby', nearby)
+  app.get('/gyms/search', search)
 }
