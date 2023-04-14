@@ -40,6 +40,11 @@ Design Pattern:
 In Memory Test Database - Representação do banco de dados em memória para realização de testes, dessa forma evitando precisar de um banco para testes, tornando os testes mais rápidos, foco em testar funcionalidades das funções, como caso de usos.
 Factory - Adiciona uma abstração extra para a instanciação de dependências de um método ou classe, ou seja, no código isso reflete nas dependências dos casos de uso que são instanciadas e passadas nos controllers, mas para evitar isso criamos as factories abstraindo as chamadas de dependerias e no conrtroller chamamos apenas a factory.
 
+RBAC - (Role-Based Access Control) é um modelo de controle de acesso baseado em funções, onde as permissões são atribuídas com base no papel ou função que um usuário possui dentro de uma organização.
+
+CI - Continuous Integration 
+CD - Continuous Deployment/Delivery
+
 SOLID:
 D - Dependency Inversion Principle (Casos de uso não instancia dependências, ele as recebe como parâmetro)
 
